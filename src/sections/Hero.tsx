@@ -29,7 +29,7 @@ export const Hero = () => {
       {/* Background Overlay */}
       <div className="absolute inset-0 bg-[radial-gradient(75%_75%_at_center_center,rgb(41,95,152,0.5)_15%,rgb(14,0,36,0.5)_78%,transparent)]"></div>
       {/* Start Planet */}
-      <div className="absolute size-64 md:size-96 bg-white-500 border border-white/20 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-[radial-gradient(50%_50%_at_16.8%_18.3%,white,white_37.7%,rgb(14,0,))] shadow-[-20px_-20px_50px_rgb(255,255,255,0.5),-20px_-20px_80px_rgb(255,255,255,0.1),0_0_50px_rgb(41,95,152)] rounded-full"></div>
+      <div className="absolute size-64 md:size-96 bg-white-500 border border-white/20 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-[radial-gradient(50%_50%_at_16.8%_18.3%,black,black_37.7%,rgb(14,0,))] shadow-[-20px_-20px_50px_rgb(255,255,255,0.5),-20px_-20px_80px_rgb(255,255,255,0.1),0_0_50px_rgb(41,95,152)] rounded-full"></div>
       {/* End Planet */}
       {/* Rings */}
       {/* Start Ring 1 */}
