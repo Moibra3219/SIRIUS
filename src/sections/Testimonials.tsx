@@ -32,7 +32,7 @@ export const Testimonials = () => {
             {[...testimonials, ...testimonials].map((testimonial, index) => (
               <div
                 key={index}
-                className="p-6 md:p-10 border border-white/15 rounded-xl bg-[linear-gradient(to_bottom_left,rgb(140,69,255,0.3),black)] max-w-xs md:max-w-md flex-none"
+                className="p-6 md:p-10 border border-white/15 rounded-xl bg-[linear-gradient(to_bottom_left,bg- rgb(29,53,101),black)] max-w-xs md:max-w-md flex-none"
               >
                 <span className="text-lg md:text-2xl tracking-tight">
                   {testimonial.text}

@@ -11,7 +11,7 @@ const navItems = [
 
 export const Header = () => {
   return (
-    <header className="sticky top-0 py-4 border-b border-white/15 md:border-none z-10 ">
+    <header className="sticky top-0 py-4 border-b border-white/15 md:border-none z-10 bg-[rgb(29,53,101)]">
       <div className="absolute inset-0 backdrop-blur -z-10 md:hidden"></div>
       <div className="container">
         <div className="relative flex justify-between items-center md:border border-white/15 md:p-2.5 rounded-xl max-w-2xl mx-auto">
@@ -34,7 +34,7 @@ export const Header = () => {
               ))}
             </nav>
           </div>
-          <div className="flex items-center gap-4">
+          <div className="flex items-center gap-4 ">
             <Button>Join waitlist</Button>
             <MenuIcon className="md:hidden" />
           </div>

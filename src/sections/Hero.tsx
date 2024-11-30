@@ -93,10 +93,10 @@ export const Hero = () => {
       </motion.div>
       {/* End Ring 3 */}
       <div className="container relative mt-16">
-        <h1 className="text-8xl md:text-[168px] md:leading-none font-semibold tracking-tighter text-center text-black">
+        <h1 className="text-8xl md:text-[168px] md:leading-none font-semibold tracking-tighter text-center text-white">
           SIRIUS
         </h1>
-        <p className="text-lg md:text-xl text-black mt-5 text-center max-w-xl mx-auto">
+        <p className="text-lg md:text-xl text-white mt-5 text-center max-w-xl mx-auto">
           Elevate your visibility effortlessly with SIRIUS, where smart
           technology meets marketing tools.
         </p>
