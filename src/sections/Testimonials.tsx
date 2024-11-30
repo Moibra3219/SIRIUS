@@ -32,13 +32,13 @@ export const Testimonials = () => {
             {[...testimonials, ...testimonials].map((testimonial, index) => (
               <div
                 key={index}
-                className="p-6 md:p-10 border border-white/15 rounded-xl bg-[linear-gradient(to_bottom_left,bg- rgb(29,53,101),black)] max-w-xs md:max-w-md flex-none"
+                className="p-6 md:p-10 border border-white/15 rounded-xl bg-[linear-gradient(to_bottom_left,rgb(29,53,101),rgb(29,53,101))] max-w-xs md:max-w-md flex-none"
               >
                 <span className="text-lg md:text-2xl tracking-tight">
                   {testimonial.text}
                 </span>
                 <div className="flex items-center gap-3 mt-5">
-                  <div className="relative after:content-[''] before:content-[''] after:absolute before:absolute after:inset-0 before:inset-0 after:bg-[rgb(140,69,255)] after:mix-blend-soft-light before:border before:border-white/30 before:z-10 before:rounded-lg">
+                  <div className="relative after:content-[''] before:content-[''] after:absolute before:absolute after:inset-0 before:inset-0 after:bg-[rgb(29,53,101)] after:mix-blend-soft-light before:border before:border-white/30 before:z-10 before:rounded-lg">
                     <Image
                       src={testimonial.avatarImg}
                       alt={`Avatar for ${testimonial.name}`}
