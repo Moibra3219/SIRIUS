@@ -3,7 +3,7 @@ import { Avatar1, Avatar2, Avatar3, Avatar4 } from "@/assets";
 export const featuresTabs = [
   {
     icon: "./assets/lottie/vroom.lottie",
-    title: "User-friendly dashboard",
+    title: "Vision",
     isNew: false,
     backgroundPositionX: 0,
     backgroundPositionY: 0,
@@ -11,7 +11,7 @@ export const featuresTabs = [
   },
   {
     icon: "./assets/lottie/click.lottie",
-    title: "One-click optimization",
+    title: "Mission",
     isNew: false,
     backgroundPositionX: 98,
     backgroundPositionY: 100,
@@ -19,8 +19,8 @@ export const featuresTabs = [
   },
   {
     icon: "./assets/lottie/stars.lottie",
-    title: "Smart keyword generator",
-    isNew: true,
+    title: "Purpose",
+    isNew: false,
     backgroundPositionX: 100,
     backgroundPositionY: 27,
     backgroundSizeX: 177,
