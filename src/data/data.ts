@@ -1,4 +1,4 @@
-import { Avatar1, Avatar2, Avatar3, Avatar4 } from "@/assets";
+import { Avatar1 } from "@/assets";
 
 export const featuresTabs = [
   {
@@ -29,27 +29,27 @@ export const featuresTabs = [
 
 export const testimonials = [
   {
-    text: "“This product has completely transformed how I manage my projects and deadlines”",
-    name: "Sophia Perez",
-    title: "Director @ Quantum",
+    text: "“From the first consultation to the execution of our campaign, the team has been nothing but supportive. They really listened to our goals and tailored their strategies to fit. The communication has been seamless, and we feel like a valued partner.”",
+    name: "Osama El-Hosseiny ",
+    title: "Manager of Vine Burger UAE",
     avatarImg: Avatar1,
   },
   {
-    text: "“These AI tools have completely revolutionized our SEO entire strategy overnight”",
-    name: "Jamie Lee",
-    title: "Founder @ Pulse",
-    avatarImg: Avatar2,
+    text: "“I was skeptical about digital marketing at first, but this company changed my mind. The ads they created have brought in leads I never thought possible. We saw a 150% return on our investment in just a few months. Truly incredible work!”",
+    name: "Samir Nassry",
+    title: " owner of Villa 70",
+    avatarImg: Avatar1,
   },
   {
-    text: "“The user interface is so intuitive and easy to use, it has saved us countless hours”",
-    name: "Alisa Hester",
-    title: "Product @ Innovate",
-    avatarImg: Avatar3,
+    text: "“What sets this company apart is their responsiveness. Anytime I have a question or need assistance, they are quick to help. Their professionalism and attention to detail give me confidence in their abilities. Thank you for making marketing stress-free!”",
+    name: "Ibrahim Elkhaledy",
+    title: " Owner of BXT Club",
+    avatarImg: Avatar1,
   },
   {
-    text: "“Our team's productivity has increased significantly since we started using this tool”",
-    name: "Alec Whitten",
-    title: "CTO @ Tech Solutions",
-    avatarImg: Avatar4,
+    text: "“I love how they balance creativity with data. Their social media campaigns are not only eye-catching but also deliver measurable results. They take the time to explain the numbers, which makes it easy for us to track ROI. Amazing team!”",
+    name: "Amany Fouaad ",
+    title: "Owner of Cin.Roll",
+    avatarImg: Avatar1,
   },
 ];
