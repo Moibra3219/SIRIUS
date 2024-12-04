@@ -1,7 +1,4 @@
-export { default as Avatar1 } from "@/assets/avatar-1.png";
-export { default as Avatar2 } from "@/assets/avatar-2.png";
-export { default as Avatar3 } from "@/assets/avatar-3.png";
-export { default as Avatar4 } from "@/assets/avatar-4.png";
+
 export { default as GridLines } from "@/assets/grid-lines.png";
 export { default as ClickIcon } from "@/assets/icon-click.svg";
 export { default as GuageIcon } from "@/assets/icon-guage.svg";
@@ -16,6 +13,7 @@ export { default as QuantumLogo } from "@/assets/logo-quantum.png";
 export { default as Logo } from "@/assets/logo.svg";
 export { default as ProductImage } from "@/assets/product-image.png";
 export { default as SocialInstagram } from "@/assets/social-instagram.svg";
-export { default as SocialX } from "@/assets/social-x.svg";
-export { default as SocialYoutube } from "@/assets/social-youtube.svg";
+export { default as Tiktok } from "@/assets/tiktok.svg";
+export { default as Whatsapp } from "@/assets/whatsapp.svg";
+export { default as SFacebook } from "@/assets/facebook.svg";
 export { default as StarsImage } from "@/assets/stars.png";

@@ -1,5 +1,4 @@
 "use client";
-import WebsiteVideo from "@/assets/Website.webp"; // Importing the video file
 import { featuresTabs } from "@/data/data";
 import {
   animate,
@@ -51,6 +50,12 @@ export const Features = () => {
     );
   };
 
+  const images = [
+    "/images/image1.jpg", // Replace with your image paths
+    "/images/image2.jpg",
+    "/images/image3.jpg",
+  ];
+
   return (
     <section className="py-20 md:py-24">
       <div className="container">
@@ -72,18 +77,25 @@ export const Features = () => {
           ))}
         </div>
         <div className="p-2.5 border border-white/20 rounded-xl mt-3">
-          <motion.video
-            className="aspect-video border border-white/20 rounded-lg mt-3"
+          <motion.div
+            className="aspect-video border border-white/20 rounded-lg mt-3 overflow-hidden relative"
             style={{
               backgroundPosition,
               backgroundSize,
             }}
-            src={WebsiteVideo}
-            autoPlay
-            muted
-            loop
-            controls={false} // Change to true if you want video controls
-          ></motion.video>
+          >
+            {images.map((image, index) => (
+              <motion.img
+                key={index}
+                src={image}
+                alt={`Image ${index + 1}`}
+                className="absolute inset-0 w-full h-full object-cover"
+                initial={{ opacity: currentTab === index ? 1 : 0 }}
+                animate={{ opacity: currentTab === index ? 1 : 0 }}
+                transition={{ duration: 0.5 }}
+              />
+            ))}
+          </motion.div>
         </div>
       </div>
     </section>

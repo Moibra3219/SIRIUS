@@ -1,4 +1,4 @@
-import { Logo, SocialX, SocialInstagram, SocialYoutube } from "@/assets";
+import { Logo, SocialX, SocialInstagram, SFacebook, Tiktok, Whatsapp } from "@/assets";
 import Link from "next/link";
 
 const navItems = [
@@ -15,7 +15,6 @@ export const Footer = () => {
       <div className="container">
         <div className="flex flex-col lg:flex-row lg:items-center gap-8">
           <div className="flex gap-2 items-center lg:flex-1">
-         
             <span className="font-medium">SIRIUS</span>
           </div>
           <nav className="flex flex-col lg:flex-row gap-5 lg:gap-7 lg:flex-1 lg:justify-center">
@@ -30,9 +29,42 @@ export const Footer = () => {
             ))}
           </nav>
           <div className="flex gap-5 lg:flex-1 lg:justify-end">
-            <SocialX className="text-white/40 hover:text-white transition" />
-            <SocialInstagram className="text-white/40 hover:text-white transition" />
-            <SocialYoutube className="text-white/40 hover:text-white transition" />
+            {/* Link for X */}
+            <a
+              href="https://twitter.com/yourusername"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-white/40 hover:text-white transition"
+            >
+              <Tiktok/>
+            </a>
+            {/* Link for Instagram */}
+            <a
+              href="https://www.instagram.com/sirius.innovations/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-white/40 hover:text-white transition"
+            >
+              <SocialInstagram />
+            </a>
+            {/* Link for Facebook */}
+            <a
+              href="https://www.facebook.com/sirius.media.agency"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-white/40 hover:text-white transition"
+            >
+              <SFacebook />
+            </a>
+                {/* Link for whatsapp */}
+                <a
+              href="https://wa.me/201152789825"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-white/40 hover:text-white transition"
+            >
+              <Whatsapp/>
+            </a>
           </div>
         </div>
       </div>
