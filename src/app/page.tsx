@@ -1,4 +1,5 @@
 import { CallToAction } from "@/sections/CallToAction";
+import { ContactMe } from "@/sections/ContactMe";
 import { Features } from "@/sections/Features";
 import { Footer } from "@/sections/Footer";
 import { Header } from "@/sections/Header";
@@ -15,7 +16,9 @@ export default function Home() {
       <Features />
       <Testimonials />
       <CallToAction />
+      <ContactMe />
       <Footer />
+     
     </main>
   );
 }

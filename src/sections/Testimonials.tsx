@@ -39,11 +39,6 @@ export const Testimonials = () => {
                 </span>
                 <div className="flex items-center gap-3 mt-5">
                   <div className="relative after:content-[''] before:content-[''] after:absolute before:absolute after:inset-0 before:inset-0 after:bg-[rgb(29,53,101)] after:mix-blend-soft-light before:border before:border-white/30 before:z-10 before:rounded-lg">
-                    <Image
-                      src={testimonial.avatarImg}
-                      alt={`Avatar for ${testimonial.name}`}
-                      className="size-11 rounded-lg grayscale"
-                    />
                   </div>
                   <div className="flex flex-col">
                     <span>{testimonial.name}</span>

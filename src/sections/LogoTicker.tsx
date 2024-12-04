@@ -45,7 +45,7 @@ export const LogoTicker = () => {
                   width={logo.width}
                   height={logo.height}
                   alt="Logo Ticker"
-                  className="h-6 w-auto"
+                  className="h-20 w-auto"
                 />
               ))}
             </motion.div>

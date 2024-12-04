@@ -17,9 +17,7 @@ export const Header = () => {
         <div className="relative flex justify-between items-center md:border border-white/15 md:p-2.5 rounded-xl max-w-2xl mx-auto">
           <div className="absolute inset-0 backdrop-blur -z-10 hidden md:block"></div>
           <div>
-            <div className="inline-flex items-center justify-center size-10 border border-white/15 rounded-lg">
-              <Logo className="size-8" />
-            </div>
+          
           </div>
           <div className="hidden md:block">
             <nav className="flex gap-8 text-sm">

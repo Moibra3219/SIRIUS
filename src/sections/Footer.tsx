@@ -15,7 +15,7 @@ export const Footer = () => {
       <div className="container">
         <div className="flex flex-col lg:flex-row lg:items-center gap-8">
           <div className="flex gap-2 items-center lg:flex-1">
-            <Logo className="size-6" />
+         
             <span className="font-medium">SIRIUS</span>
           </div>
           <nav className="flex flex-col lg:flex-row gap-5 lg:gap-7 lg:flex-1 lg:justify-center">

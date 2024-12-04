@@ -1,5 +1,5 @@
 "use client";
-import { ProductImage } from "@/assets";
+import WebsiteVideo from "@/assets/Website.webp"; // Importing the video file
 import { featuresTabs } from "@/data/data";
 import {
   animate,
@@ -58,7 +58,7 @@ export const Features = () => {
           Elevate your Marketing efforts.
         </h2>
         <p className="text-lg md:text-xl text-white/70 text-center tracking-tight mt-5 max-w-2xl mx-auto">
-          From small startups to large enterprises, our Marketing tools has
+          From small startups to large enterprises, our Marketing tools have
           revolutionized the way businesses approach.
         </p>
         <div className="flex flex-col lg:flex-row gap-3 mt-10">
@@ -72,14 +72,18 @@ export const Features = () => {
           ))}
         </div>
         <div className="p-2.5 border border-white/20 rounded-xl mt-3">
-          <motion.div
-            className="aspect-video bg-cover border border-white/20 rounded-lg mt-3"
+          <motion.video
+            className="aspect-video border border-white/20 rounded-lg mt-3"
             style={{
               backgroundPosition,
               backgroundSize,
-              backgroundImage: `url(${ProductImage.src})`,
             }}
-          ></motion.div>
+            src={WebsiteVideo}
+            autoPlay
+            muted
+            loop
+            controls={false} // Change to true if you want video controls
+          ></motion.video>
         </div>
       </div>
     </section>
