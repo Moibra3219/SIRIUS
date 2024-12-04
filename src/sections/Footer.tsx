@@ -29,9 +29,9 @@ export const Footer = () => {
             ))}
           </nav>
           <div className="flex gap-5 lg:flex-1 lg:justify-end">
-            {/* Link for X */}
+            {/* Link for Tiktok */}
             <a
-              href="https://twitter.com/yourusername"
+              href="https://www.tiktok.com/@siriusmediaagency?is_from_webapp=1&sender_device=pc"
               target="_blank"
               rel="noopener noreferrer"
               className="text-white/40 hover:text-white transition"
