@@ -101,7 +101,7 @@ export const Hero = () => {
           technology meets marketing tools.
         </p>
         <div className="flex justify-center mt-5">
-          <Button>Join waitlist</Button>
+          <Button >Join waitlist</Button>
         </div>
       </div>
     </motion.section>

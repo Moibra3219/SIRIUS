@@ -1,4 +1,4 @@
-import { Logo, SocialX, SocialInstagram, SFacebook, Tiktok, Whatsapp } from "@/assets";
+import {  SocialInstagram, SFacebook, Tiktok, Whatsapp, Linkedin } from "@/assets";
 import Link from "next/link";
 
 const navItems = [
@@ -55,6 +55,15 @@ export const Footer = () => {
               className="text-white/40 hover:text-white transition"
             >
               <SFacebook />
+            </a>
+                   {/* Link for linkein */}
+                   <a
+              href="https://www.linkedin.com/in/sirius-media-agency-875863338/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-white/40 hover:text-white transition"
+            >
+              <Linkedin/>
             </a>
                 {/* Link for whatsapp */}
                 <a
