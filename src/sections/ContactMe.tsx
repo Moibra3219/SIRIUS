@@ -71,8 +71,7 @@ export const ContactMe = () => {
                   <label htmlFor="message" className="block text-white mb-2">Message</label>
                   <textarea
                     name="message"
-                    i
-                    d="message"
+                    id="message"
                     className="w-full p-3 rounded-md bg-white/10 text-white"
                     placeholder="Your Message"
                     rows={4}
