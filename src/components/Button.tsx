@@ -2,13 +2,13 @@ import React, { FC, PropsWithChildren } from "react";
 import { twMerge } from "tailwind-merge";
 
 interface ButtonProps {
-  classname?: string;
+  classname?: string | any;
 }
 
-export const Button: FC<PropsWithChildren<ButtonProps>> = ({
+export const Button: FC<PropsWithChildren<ButtonProps>>|any = ({
   children,
   classname,
-}) => {
+}:{children:any , classname:any}) => {
   return (
     <button
       type="button"

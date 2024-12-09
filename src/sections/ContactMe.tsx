@@ -1,5 +1,5 @@
 "use client";
-import { useState } from "react";
+import React, { useState } from "react";
 import emailjs from "emailjs-com";
 import { Button } from "@/components/Button";
 
@@ -8,7 +8,7 @@ export const ContactMe = () => {
     const [isLoading, setIsLoading] = useState(false);
     const [errorMessage, setErrorMessage] = useState<string | null>(null);
   
-    const handleFormSubmit = async (e: React.FormEvent) => {
+    const handleFormSubmit = async (e: React.FormEvent | any) => {
       e.preventDefault();
       setIsSubmitted(false);
       setIsLoading(true);
@@ -20,7 +20,7 @@ export const ContactMe = () => {
         await emailjs.sendForm('service_1jcq632', 'YOUR_TEMPLATE_ID', form, 'YOUR_USER_ID');
         setIsSubmitted(true);
       } catch (error) {
-        console.error("Error sending email:", error);
+        // console.log("Error sending email:", error);
         setErrorMessage("There was an error sending your message. Please try again later.");
       } finally {
         setIsLoading(false);
@@ -39,7 +39,7 @@ export const ContactMe = () => {
   
           {isSubmitted ? (
             <div className="mt-10 text-center text-xl font-semibold text-white">
-              Thank you for reaching out! We'll get back to you shortly.
+              Thank you for reaching out! We will get back to you shortly.
             </div>
           ) : (
             <>

@@ -1,6 +1,5 @@
 "use client";
 import { Button } from "@/components/Button";
-import { StarsImage } from "@/assets";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
 
