@@ -40,7 +40,7 @@ export const Footer = () => {
             </a>
             {/* Link for Instagram */}
             <a
-              href="https://www.instagram.com/sirius.innovations/"
+              href="https://www.instagram.com/siriusmediaagecny/"
               target="_blank"
               rel="noopener noreferrer"
               className="text-white/40 hover:text-white transition"
