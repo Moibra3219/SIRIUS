@@ -1,13 +1,17 @@
 "use client";
-import React from "react";
+import React, { useState } from "react";
 import { Button } from "@/components/Button";
 
 function ContactMe() {
-  const onSubmit = async (event: any) => {
-    event.preventDefault();
-    const formData = new FormData(event.target);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submissionMessage, setSubmissionMessage] = useState<string | null>(null);
 
-    formData.append("access_key", "8696291b-0cee-480b-bf4e-5e16c90ca01c");
+  const sendMessage = async (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+    setIsSubmitting(true);
+
+    const formData = new FormData(event.currentTarget);
+    formData.append("access_key",  "8696291b-0cee-480b-bf4e-5e16c90ca01c");
 
     const object = Object.fromEntries(formData);
     const json = JSON.stringify(object);
@@ -21,16 +25,24 @@ function ContactMe() {
         },
         body: json,
       });
+
       const data = await res.json();
-      console.log(data);
-      } catch (error) {
-        console.error(error);
-        }
- 
+
+      if (data.success) {
+        setSubmissionMessage("Message sent successfully!");
+        event.currentTarget.reset();
+      } else {
+        setSubmissionMessage("Failed to send message. Please try again.");
+      }
+    } catch (error) {
+      setSubmissionMessage("An error occurred. Please try again.");
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
-    <section className="py-20 md:py-24">
+    <section className="py-20 md:py-24" id="contact" >
       <div className="container">
         <h2 className="text-5xl md:text-6xl font-medium text-center tracking-tighter">
           Get in Touch with Us!
@@ -40,8 +52,19 @@ function ContactMe() {
           we will get back to you soon!
         </p>
 
+        {submissionMessage && (
+          <div className={`
+            text-center mt-4 p-3 rounded 
+            ${submissionMessage.includes("successfully") 
+              ? "bg-green-500 text-white" 
+              : "bg-red-500 text-white"}
+          `}>
+            {submissionMessage}
+          </div>
+        )}
+
         <form
-          onSubmit={onSubmit}
+          onSubmit={sendMessage}
           className="mt-10 max-w-lg mx-auto bg-white/10 p-6 rounded-lg shadow-md"
         >
           <div className="mb-4">
@@ -85,8 +108,12 @@ function ContactMe() {
           </div>
 
           <div className="flex justify-center mt-6">
-            <Button type="submit" className="w-full md:w-auto">
-              Send Message
+            <Button 
+              type="submit" 
+              className="w-full md:w-auto" 
+              disabled={isSubmitting}
+            >
+              {isSubmitting ? "Sending..." : "Submit"}
             </Button>
           </div>
         </form>

@@ -9,6 +9,7 @@ import {
 } from "framer-motion";
 import { useRef } from "react";
 import useRelativeMousePosition from "@/hooks/useRelativeMousePosition";
+import Link from "next/link";
 
 export const CallToAction = () => {
   const sectionRef = useRef<HTMLElement>(null);
@@ -67,7 +68,11 @@ export const CallToAction = () => {
               Achieve clear, impactful results without the complexity.
             </p>
             <div className="flex justify-center mt-8">
+            <Link href="#contact">
               <Button>Join waitlist</Button>
+            </Link>
+        
+            
             </div>
           </div>
         </motion.div>

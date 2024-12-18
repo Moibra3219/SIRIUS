@@ -1,6 +1,7 @@
 "use client";
 import { Button } from "@/components/Button";
-import { motion, useScroll, useTransform } from "framer-motion";
+import { motion, useScroll, useTransform, Variants } from "framer-motion";
+import Link from "next/link";
 import { useRef } from "react";
 
 export const Hero = () => {
@@ -15,11 +16,27 @@ export const Hero = () => {
     [0, 1],
     [-300, 300]
   );
+    // Text animation variants
+
+  const textVariants: Variants = { 
+    hidden: { 
+      opacity: 0, 
+      y: 50 
+    },
+    visible: { 
+      opacity: 1, 
+      y: 0,
+      transition: {
+        duration: 0.8,
+        ease: "easeOut"
+      }
+    }
+  };
 
   return (
     <motion.section
       ref={sectionRef}
-      className="h-[492px] md:h-[800px] flex items-center overflow-hidden relative"
+      className="h-[492px] md:h-[800px] flex items-center justify-center overflow-hidden relative"
       style={{
         background: "rgb(41, 95, 152)", // Solid gradient background
         backgroundPositionY,
@@ -28,7 +45,18 @@ export const Hero = () => {
       {/* Background Overlay */}
       <div className="absolute inset-0 bg-[radial-gradient(75%_75%_at_center_center,rgb(41,95,152,0.5)_15%,rgb(14,0,36,0.5)_78%,transparent)]"></div>
       {/* Start Planet */}
-      <div className="absolute size-64 md:size-96 bg-white-500 border border-white/20 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-[radial-gradient(50%_50%_at_16.8%_18.3%,black,black_37.7%,rgb(14,0,))] shadow-[-20px_-20px_50px_rgb(255,255,255,0.5),-20px_-20px_80px_rgb(255,255,255,0.1),0_0_50px_rgb(41,95,152)] rounded-full"></div>
+      <motion.div 
+        className="absolute size-64 md:size-96 bg-white-500 border border-white/20  -translate-x-1/2 -translate-y-1/2 bg-[radial-gradient(50%_50%_at_16.8%_18.3%,black,black_37.7%,rgb(14,0,))] shadow-[-20px_-20px_50px_rgb(255,255,255,0.5),-20px_-20px_80px_rgb(255,255,255,0.1),0_0_50px_rgb(41,95,152)] rounded-full"
+        animate={{ 
+          scale: [1, 1.05, 1],
+          rotate: [0, 5, -5, 0]
+        }}
+        transition={{
+          duration: 5,
+          repeat: Infinity,
+          repeatType: "mirror"
+        }}
+      ></motion.div>
       {/* End Planet */}
       {/* Rings */}
       {/* Start Ring 1 */}
@@ -92,15 +120,28 @@ export const Hero = () => {
       </motion.div>
       {/* End Ring 3 */}
       <div className="container relative mt-16">
-        <h1 className="text-8xl md:text-[168px] md:leading-none font-semibold tracking-tighter text-center text-white">
+      <motion.h1 
+          className="text-8xl md:text-[168px] md:leading-none font-semibold tracking-tighter text-center text-white"
+          variants={textVariants}
+          initial="hidden"
+          animate="visible"
+        >
           SIRIUS
-        </h1>
-        <p className="text-lg md:text-xl text-white mt-5 text-center max-w-xl mx-auto">
+        </motion.h1>
+        <motion.p 
+          className="text-lg md:text-xl text-white mt-5 text-center max-w-xl mx-auto"
+          variants={textVariants}
+          initial="hidden"
+          animate="visible"
+          transition={{ delay: 0.2 }}
+        >
           Elevate your visibility effortlessly with SIRIUS, where smart
           technology meets marketing tools.
-        </p>
+        </motion.p>
         <div className="flex justify-center mt-5">
-          <Button >Join waitlist</Button>
+        <Link href="#contact">
+              <Button>Join waitlist</Button>
+            </Link>
         </div>
       </div>
     </motion.section>
